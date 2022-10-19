@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("home", {homeStartingContent: homeStartingContent});
 })
 
 // Depending on whether you're running local or hosted the port may be different
