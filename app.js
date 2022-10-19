@@ -19,6 +19,14 @@ app.get("/", (req, res) => {
   res.render("home", {homeStartingContent: homeStartingContent});
 })
 
+app.get("/about", (req, res) => {
+  res.render("about", {aboutContent: aboutContent});
+})
+
+app.get("/contact", (req, res) => {
+  res.render("contact", {contactContent: contactContent});
+})
+
 // Depending on whether you're running local or hosted the port may be different
 let port = process.env.PORT;
 if (port == null || port == "") {
