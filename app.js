@@ -32,8 +32,8 @@ app.get("/contact", (req, res) => {
 })
 
 app.post("/compose", (req, res) => {
-  console.log(req.body.postTitle);
-  console.log(req.body.postBody)
+  let car = {title: req.body.postTitle, body: req.body.postBody};
+  console.log(car);
 })
 
 // Depending on whether you're running local or hosted the port may be different
