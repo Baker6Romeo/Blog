@@ -31,6 +31,10 @@ app.get("/contact", (req, res) => {
   res.render("contact", {contactContent: contactContent});
 })
 
+app.post("/compose", (req, res) => {
+  console.log(req.body.newItem);
+})
+
 // Depending on whether you're running local or hosted the port may be different
 let port = process.env.PORT;
 if (port == null || port == "") {
