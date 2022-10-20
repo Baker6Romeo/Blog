@@ -5,4 +5,6 @@
 
 <%- include("partial/footer") -%>
 
-<% console.log(posts); %>
+<% posts.forEach(post => {
+  console.log(post.title);
+}); %>
