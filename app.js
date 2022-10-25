@@ -35,6 +35,9 @@ app.get("/contact", (req, res) => {
   res.render("contact", {contactContent: contactContent});
 })
 
+app.get("/posts/:title", (req, res) => {
+  console.log(req.params.title);
+})
 app.post("/compose", (req, res) => {
   const post = {
     title: req.body.postTitle,
