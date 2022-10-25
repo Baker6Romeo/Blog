@@ -37,7 +37,13 @@ app.get("/contact", (req, res) => {
 
 app.get("/posts/:title", (req, res) => {
   console.log(req.params.title);
+  posts.forEach(post => {
+    if(post.title === req.params.title) {
+      console.log("It's a match!!!");
+    }
+  });
 })
+
 app.post("/compose", (req, res) => {
   const post = {
     title: req.body.postTitle,
