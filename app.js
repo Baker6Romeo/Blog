@@ -41,7 +41,7 @@ app.get("/posts/:title", (req, res) => {
   posts.forEach(post => {
     const storedTitle = lodash.lowerCase(post.title);
     if(storedTitle === requestedPost) {
-      console.log("It's a match!!!");
+      res.render("post", {post: post});
     } else {
       console.log("Not a match...")
     }
